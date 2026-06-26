@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import LoadingScreen from './components/LoadingScreen'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
@@ -16,6 +17,8 @@ import InfoPage from './pages/InfoPage'
 
 function App() {
   return (
+    <>
+    <LoadingScreen />
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
@@ -54,6 +57,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </>
   )
 }
 
