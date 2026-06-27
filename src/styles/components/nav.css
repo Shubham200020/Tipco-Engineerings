@@ -4,3 +4,127 @@
   .nav-link:hover { color: var(--brand); }
   .nav-link:hover::after { width: 100%; }
 }
+
+/* ── Application tabs card animations ──────────────────────────────────── */
+
+@keyframes tabCardIn {
+  from { opacity: 0; transform: translateY(28px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes tabShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes tabGlowPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 0.85; transform: scale(1.04); }
+}
+
+@keyframes tabDotSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes tabActiveBounce {
+  0%   { transform: translateY(0) scale(1); }
+  40%  { transform: translateY(-6px) scale(1.03); }
+  70%  { transform: translateY(-2px) scale(1.01); }
+  100% { transform: translateY(-4px) scale(1.02); }
+}
+
+.tab-card-in {
+  animation: tabCardIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.tab-desc-in {
+  animation: tabFadeIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.tab-btn-active {
+  animation: tabActiveBounce 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.tab-btn-shimmer {
+  background-size: 200% auto;
+  animation: tabShimmer 2.8s linear infinite;
+}
+
+.tab-glow-pulse {
+  animation: tabGlowPulse 2.5s ease-in-out infinite;
+}
+
+.tab-dot-spin {
+  animation: tabDotSpin 8s linear infinite;
+}
+
+/* ── Fullscreen menu animations ─────────────────────────────────────────── */
+
+@keyframes fsNavItemIn {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fsDecorSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes fsDecorSpinReverse {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+@keyframes fsDecorFloat {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-18px) scale(1.04); }
+}
+
+@keyframes fsDotPulse {
+  0%, 100% { opacity: 0.08; }
+  50%       { opacity: 0.18; }
+}
+
+@keyframes fsSubItemIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fsLineGrow {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+.fs-nav-item {
+  animation: fsNavItemIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.fs-decor-spin {
+  animation: fsDecorSpin 22s linear infinite;
+}
+
+.fs-decor-spin-rev {
+  animation: fsDecorSpinReverse 18s linear infinite;
+}
+
+.fs-decor-float {
+  animation: fsDecorFloat 6s ease-in-out infinite;
+}
+
+.fs-dot-pulse {
+  animation: fsDotPulse 3s ease-in-out infinite;
+}
+
+.fs-sub-item {
+  animation: fsSubItemIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.fs-line-grow {
+  animation: fsLineGrow 0.4s ease-out both;
+}

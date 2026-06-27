@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const LOGO = 'https://tipcoengineering.com/public/uploads/Tipco.png'
+const LOGO = '/img/logo/tipco-logo.png'
 
 export default function LoadingScreen() {
   const [fading, setFading] = useState(false)
@@ -16,8 +16,8 @@ export default function LoadingScreen() {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white pointer-events-none select-none"
-      style={{ opacity: fading ? 0 : 1, transition: 'opacity 0.5s ease' }}
+      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center pointer-events-none select-none"
+      style={{ opacity: fading ? 0 : 1, transition: 'opacity 0.5s ease', background: 'var(--background)' }}
     >
       <img src={LOGO} alt="Tipco Engineering" className="h-14 w-auto mb-6" />
       <div className="flex items-center gap-1.5">

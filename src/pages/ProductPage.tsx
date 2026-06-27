@@ -117,7 +117,7 @@ export default function ProductPage() {
       </section>
 
       {/* ── Tab strip ──────────────────────────────────────────── */}
-      <div className="border-y border-gray-200 sticky top-16 bg-white z-[100]">
+      <div className="border-y border-gray-200 sticky top-20 z-[100]" style={{ background: 'var(--background)' }}>
         <div className="max-w-[1280px] mx-auto px-6 flex gap-6 overflow-x-auto">
           {tabs.map(t => (
             <a key={t.id} href={`#${t.id}`} className="py-4 text-xs font-bold uppercase tracking-wide text-gray-600 hover:text-brand whitespace-nowrap border-b-2 border-transparent hover:border-brand transition-colors">

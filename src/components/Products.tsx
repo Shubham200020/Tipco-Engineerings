@@ -122,7 +122,7 @@ export default function Products() {
           </aside>
 
           {/* Vertical divider */}
-          <div className="hidden lg:block w-px mx-0 flex-shrink-0" style={{ background: '#ebebeb' }} />
+          <div className="hidden lg:block w-px mx-0 flex-shrink-0" style={{ background: 'var(--border)' }} />
 
           {/* Right: product grid */}
           <div className="flex-1 min-w-0 lg:pl-10">

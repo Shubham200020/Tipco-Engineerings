@@ -338,4 +338,81 @@ export function clientLogo(id: number) {
   return `${CDN}/public/uploads/client-${id}.${ext}`
 }
 
+// ── News / Blog articles ──────────────────────────────────────────────────────
+export interface NewsArticle {
+  slug: string
+  title: string
+  date: string
+  excerpt: string
+  img: string
+  href: string
+}
+
+export const NEWS_ARTICLES: NewsArticle[] = [
+  {
+    slug: 'tipco-launches-nano-bead-mill-2025',
+    title: 'Tipco Launches Next-Generation Nano Bead Mill for Ultra-Fine Grinding',
+    date: 'May 20, 2025',
+    excerpt: 'Our new Nano Bead Mill series achieves particle sizes down to 20 nm, setting a new benchmark for pigment dispersion in the paint and pharma industries.',
+    img: `${CDN}/public/productwork/Dyno%20Mill.png`,
+    href: '/blog',
+  },
+  {
+    slug: 'paint-india-2025-recap',
+    title: 'Tipco at Paint India 2025 — Highlights & Key Takeaways',
+    date: 'April 5, 2025',
+    excerpt: 'We showcased our full range of mixing and milling machinery at Paint India 2025, Mumbai. Thousands of industry visitors explored live machine demonstrations at our stall.',
+    img: `${CDN}/public/uploads/event-12.png`,
+    href: '/blog',
+  },
+  {
+    slug: 'colour-society-seminar-2025',
+    title: 'Tipco Lights Up THE COLOUR SOCIETY Annual Seminar 2025',
+    date: 'January 17, 2025',
+    excerpt: 'At Lonavala, Maharashtra, Tipco engineers presented technical insights on high-shear disperser design and its impact on coating quality and energy efficiency.',
+    img: `${CDN}/public/uploads/event-15.jpg`,
+    href: '/blog',
+  },
+  {
+    slug: 'china-coating-show-2024',
+    title: 'Tipco Exhibits at China Coating Show 2024, Guangzhou',
+    date: 'December 5, 2024',
+    excerpt: 'Our team represented Tipco Engineering at one of Asia\'s largest coatings trade shows, introducing our horizontal bead mill series to international buyers.',
+    img: `${CDN}/public/uploads/event-14.jpg`,
+    href: '/blog',
+  },
+  {
+    slug: 'iso-recertification-2024',
+    title: 'Tipco Engineering Achieves ISO 9001:2015 Recertification',
+    date: 'October 10, 2024',
+    excerpt: 'Following a rigorous third-party audit, Tipco Engineering has successfully renewed its ISO 9001:2015 certification, reaffirming our commitment to manufacturing excellence.',
+    img: `${CDN}/public/uploads/Paint%20%26%20Coating%20Event%20by%20Tipco%20in%20ICT.png`,
+    href: '/blog',
+  },
+  {
+    slug: '500-machines-milestone',
+    title: 'Milestone: 500+ Machines Installed Across India and Beyond',
+    date: 'August 1, 2024',
+    excerpt: 'Tipco Engineering celebrates a landmark achievement — over 500 machines now running in production facilities across 15 countries, serving paint, pharma, chemical and ink industries.',
+    img: `${CDN}/public/productwork/Bead%20Mill%20for%20Ink%20Manufacturing.png`,
+    href: '/blog',
+  },
+  {
+    slug: 'basket-mill-upgrade-2024',
+    title: 'Upgraded Basket Mill Series Now Available with Touchscreen PLC Control',
+    date: 'June 12, 2024',
+    excerpt: 'The redesigned Basket Mill range now features an integrated touchscreen PLC control panel, enabling precise speed and temperature management for batch production environments.',
+    img: `${CDN}/public/productwork/Basket%20Mill%20(1).png`,
+    href: '/blog',
+  },
+  {
+    slug: 'pune-office-inauguration',
+    title: 'Tipco Opens New Sales & Service Office in Pune, Maharashtra',
+    date: 'March 22, 2024',
+    excerpt: 'To better serve our customers in Western India, Tipco Engineering has inaugurated a new office in Wakad, Pune, offering direct sales support and faster on-site service.',
+    img: `${CDN}/public/uploads/banner_team.jpg`,
+    href: '/blog',
+  },
+]
+
 export { CDN }

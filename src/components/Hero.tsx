@@ -25,7 +25,7 @@ export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-white">
       {/* Native slide ratio is 1600 x 500 — keep it so the artwork never crops */}
-      <div className="relative w-full" style={{ aspectRatio: '1600 / 500' }}>
+      <div className="relative w-full" style={{ aspectRatio: '1600 / 500', minHeight: '180px' }}>
         {SLIDES.map((src, i) => (
           <img
             key={src}

@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* About */}
           <div className="col-span-2 lg:col-span-1">
-            <img src="https://tipcoengineering.com/public/uploads/Tipco.png" alt="Tipco Engineering" className="h-10 mb-4 bg-white rounded px-2 py-1 w-fit" />
+            <img src="/img/logo/tipco-logo.png" alt="Tipco Engineering" className="h-10 mb-4 rounded px-2 py-1 w-fit" style={{ background: '#fff' }} />
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
               Tipco Engineering India Pvt. Ltd. — manufacturers of industrial process plants and machinery for the Chemical, Paint, Ink, Pharma and Food industries.
             </p>

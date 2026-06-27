@@ -51,3 +51,12 @@ export interface NavItem {
   href?: string
   children?: NavItem[]
 }
+
+export interface NewsArticle {
+  slug: string
+  title: string
+  date: string
+  excerpt: string
+  img: string
+  href: string
+}

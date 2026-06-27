@@ -1,8 +1,26 @@
 import { Link } from 'react-router-dom'
+import { MapPin, ExternalLink, Building2 } from 'lucide-react'
 import PageBanner from '../components/PageBanner'
 import SectionHeader from '../components/SectionHeader'
 import GetQuote from '../components/GetQuote'
 import StatsBar from '../components/StatsBar'
+
+const OFFICES = [
+  {
+    tag: 'Head Office',
+    city: 'Sonipat',
+    state: 'Haryana',
+    address: 'Plot No. 1689, 1658, Sector-38, Phase-1,\nRai Industrial Area, Sonipat, Haryana 131029',
+    mapUrl: 'https://maps.google.com/?q=Tipco+Engineering+India+Pvt+Ltd+Rai+Sonipat+Haryana+131029',
+  },
+  {
+    tag: 'Branch Office',
+    city: 'Pune',
+    state: 'Maharashtra',
+    address: 'Bhumkar Chowk, Keystone Altura,\nnear Ginger Hotel, Mulshi, Wakad,\nPimpri-Chinchwad, Maharashtra 411033',
+    mapUrl: 'https://maps.google.com/?q=Bhumkar+Chowk+Keystone+Altura+Wakad+Pimpri-Chinchwad+Maharashtra+411033',
+  },
+]
 
 export default function AboutUs() {
   return (
@@ -82,6 +100,47 @@ export default function AboutUs() {
         </div>
         <div className="flex justify-center mt-10">
           <Link to="/product" className="btn btn-primary px-8 py-2.5 text-sm">Explore Our Products</Link>
+        </div>
+      </section>
+
+      {/* Locations */}
+      <section className="py-16" style={{ background: 'var(--background)' }}>
+        <div className="max-w-[1280px] mx-auto px-6">
+          <SectionHeader title="Our Locations" align="center" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {OFFICES.map(o => (
+              <div
+                key={o.city}
+                className="rounded-2xl p-6 flex gap-4 items-start"
+                style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+              >
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 text-white" style={{ background: 'var(--brand)' }}>
+                  <Building2 size={18} />
+                </div>
+                <div>
+                  <span className="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full mb-2" style={{ background: 'var(--brand-light)', color: 'var(--brand)' }}>
+                    {o.tag}
+                  </span>
+                  <h3 className="font-bold text-base mb-1" style={{ color: 'var(--foreground)' }}>{o.city}, {o.state}</h3>
+                  <p className="text-sm leading-relaxed whitespace-pre-line mb-3" style={{ color: 'var(--foreground-muted)' }}>{o.address}</p>
+                  <a
+                    href={o.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold hover:underline"
+                    style={{ color: 'var(--brand)' }}
+                  >
+                    <MapPin size={11} /> Get Directions <ExternalLink size={9} />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center mt-8">
+            <Link to="/contact-us#locations" className="btn btn-outline px-8 py-2.5 text-sm">
+              View on Map
+            </Link>
+          </div>
         </div>
       </section>
 
